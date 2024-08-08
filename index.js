@@ -1,9 +1,10 @@
+require('dotenv').config();
 const http = require('http');
 const https = require('https');
 const url = require('url');
 
-// URL to proxy
-const PROXY_URL = 'https://cataas.com';
+// Load URL from .env file and construct the full proxy URL
+const PROXY_URL = `https://${process.env.URL}`;
 
 const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url);
