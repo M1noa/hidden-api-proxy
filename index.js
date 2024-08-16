@@ -1,4 +1,3 @@
-// server.js
 const http = require('http');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 require('dotenv').config();
